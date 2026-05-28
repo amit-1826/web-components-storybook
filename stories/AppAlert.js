@@ -43,7 +43,9 @@ class AppAlert extends HTMLElement {
   }
 }
 
-customElements.define("app-alert", AppAlert);
+if (!customElements.get("app-alert")) {
+  customElements.define("app-alert", AppAlert);
+}
 
 const alert = document.querySelector("app-alert");
 

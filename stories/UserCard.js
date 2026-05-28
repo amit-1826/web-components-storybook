@@ -46,7 +46,9 @@ class UserCard extends HTMLElement {
   }
 }
 
-customElements.define("user-card", UserCard);
+if (!customElements.get("user-card")) {
+  customElements.define("user-card", UserCard);
+}
 
 const card = document.querySelector("user-card");
 setTimeout(() => {

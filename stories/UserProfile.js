@@ -48,4 +48,6 @@ class UserProfile extends HTMLElement {
   }
 }
 
-customElements.define("user-profile", UserProfile);
+if (!customElements.get("user-profile")) {
+  customElements.define("user-profile", UserProfile);
+}

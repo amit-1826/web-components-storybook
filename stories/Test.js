@@ -37,4 +37,6 @@ class HelloUser extends HTMLElement {
   }
 }
 
-customElements.define("hello-user", HelloUser);
+if (!customElements.get("hello-user")) {
+  customElements.define("hello-user", HelloUser);
+}

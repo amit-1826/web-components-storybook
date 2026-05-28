@@ -93,4 +93,6 @@ class AppModel extends HTMLElement {
   }
 }
 
-customElements.define("app-modal", AppModel);
+if (!customElements.get("app-modal")) {
+  customElements.define("app-modal", AppModel);
+}

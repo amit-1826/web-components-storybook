@@ -50,10 +50,12 @@ class CounterBox extends HTMLElement {
   }
 }
 
-customElements.define("counter-box", CounterBox);
+if (!customElements.get("counter-box")) {
+  customElements.define("counter-box", CounterBox);
+}
 
-const counter = document.querySelector("counter-box");
+/* const counter = document.querySelector("counter-box");
 
 counter.addEventListener("count-changed", (event) => {
   console.log(event.detail.count);
-});
+}); */

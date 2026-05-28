@@ -27,4 +27,6 @@ class AppCard extends HTMLElement {
   }
 }
 
-customElements.define("app-card", AppCard);
+if (!customElements.get("app-card")) {
+  customElements.define("app-card", AppCard);
+}

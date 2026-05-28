@@ -73,9 +73,11 @@ class ToggleSwitch extends HTMLElement {
   }
 }
 
-customElements.define("toggle-switch", ToggleSwitch);
+if (!customElements.get("toggle-switch")) {
+  customElements.define("toggle-switch", ToggleSwitch);
+}
 
-const switchToggle = document.querySelector("toggle-switch");
+/* const switchToggle = document.querySelector("toggle-switch");
 switchToggle.addEventListener("toggle-change", (event) => {
   console.log("Toggle state:", event.detail.isOn);
-});
+}); */

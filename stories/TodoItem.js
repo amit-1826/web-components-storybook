@@ -53,4 +53,6 @@ class TodoItem extends HTMLElement {
   }
 }
 
-customElements.define("todo-item", TodoItem);
+if (!customElements.get("todo-item")) {
+  customElements.define("todo-item", TodoItem);
+}
